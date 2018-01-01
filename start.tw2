@@ -1,0 +1,30 @@
+::Configuration [twee2]
+Twee2::build_config.story_ifid = '492e6a34-0a0f-4d45-9a0a-f29570026847'
+Twee2::build_config.story_format = 'Snowman'
+
+::StoryTitle
+PMDIF
+
+::Start
+# Welcome to the world of Pokemon!
+You've been brought here by an unkown force, and it's my job to match your spirit to a Pokemon.
+I'm sure you know the drill. Answer my [[questions->FirstQuestion]] to the best of your ability, please!
+
+::FirstQuestion
+First Question...
+
+<%
+  var question = Math.floor(Math.random() * 4);
+  switch (question) {
+    case 0: print('Have you ever blurted something out without thinking about the consequences first?');
+      break;
+    case 1: print("Once you've decided something, do you see it through to the end?");
+      break;
+    case 2: print('Have you ever said "nice to meet you" to someone you have met previously?');
+      break;
+    case 3: print('Do you want to be taller someday?');
+      break;
+  }
+%>
+
+You're a quagsire you beautiful you.
