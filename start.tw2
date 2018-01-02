@@ -11,20 +11,25 @@ You've been brought here by an unkown force, and it's my job to match your spiri
 I'm sure you know the drill. Answer my [[questions->FirstQuestion]] to the best of your ability, please!
 
 ::FirstQuestion
-First Question...
+Alright, here we go...
+
+[texthere]{#questions.question}
+
+[Answer 1]{#positive.answer} [Answer 2]{#negative.answer}
 
 <%
-  var question = Math.floor(Math.random() * 4);
-  switch (question) {
-    case 0: print('Have you ever blurted something out without thinking about the consequences first?');
-      break;
-    case 1: print("Once you've decided something, do you see it through to the end?");
-      break;
-    case 2: print('Have you ever said "nice to meet you" to someone you have met previously?');
-      break;
-    case 3: print('Do you want to be taller someday?');
-      break;
+  function question(message, stat1, stat2, bonus){
+    $("#questions").text(message);
+    $("#positive").text("Yes");
+    $("#negative").text("No");
   }
+
+  s.assertiveness = 0;
+  s.patience = 0;
+  question("Do you wanna get taller someday?",
+    s.assertiveness, s.patience, 2);
 %>
 
 You're a quagsire you beautiful you.
+
+::Quiz [script]
