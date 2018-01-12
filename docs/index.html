@@ -10,25 +10,40 @@ PMDIF
 <body>
 <div id="passage"></div>
 
-<tw-storydata name="PMDIF" startnode="1" creator="Twee2" creator-version="0.5.0" ifid="492e6a34-0a0f-4d45-9a0a-f29570026847" format="Snowman" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="Start" tags="" position=""># Welcome to the world of Pokemon!
+<tw-storydata name="PMDIF" startnode="1" creator="Twee2" creator-version="0.5.0" ifid="492e6a34-0a0f-4d45-9a0a-f29570026847" format="Snowman" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position=""># Welcome to the world of Pokemon!
 You've been brought here by an unkown force, and it's my job to match your spirit to a Pokemon.
 I'm sure you know the drill. Answer my [[questions-&gt;FirstQuestion]] to the best of your ability, please!</tw-passagedata><tw-passagedata pid="2" name="FirstQuestion" tags="" position="">Alright, here we go...
 
-[texthere]{#questions.question}
+[
+Question
+]{#question}
 
-[Answer 1]{#positive.answer} [Answer 2]{#negative.answer}
+[
+Answer 1
+]{#positive.answer}
+[
+Answer 2
+]{#negative.answer}
 
 &lt;%
-  function question(message, stat1, stat2, bonus){
-    $("#questions").text(message);
-    $("#positive").text("Yes");
-    $("#negative").text("No");
-  }
+function question(message, stat1, stat2, bonus){
+  jQuery( "#positive" ).text( "Yes" );
+  $( "#positive" ).click(function() {
+    stat1 = stat1 + bonus;
+    s.show("Start");
+    console.log("assertiveness + " + bonus);
+    });
+  $( "#negative" ).text( "No" );
+  $( "#negative" ).click(function() {
+    stat2 = stat2 + bonus;
+    s.show("Start");
+    });
+}
 
+  console.log( jQuery( "div:first" ).text());
   s.assertiveness = 0;
   s.patience = 0;
-  question("Do you wanna get taller someday?",
+  window.onload = question("Do you wanna get taller someday?",
     s.assertiveness, s.patience, 2);
 %&gt;
 
