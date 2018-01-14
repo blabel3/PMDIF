@@ -10,6 +10,8 @@ PMDIF
 You've been brought here by an unkown force, and it's my job to match your spirit to a Pokemon.
 I'm sure you know the drill. Answer my [[questions->FirstQuestion]] to the best of your ability, please!
 
+<% $( "div:first" ).click(console.log("haha yes")); %>
+
 ::FirstQuestion
 Alright, here we go...
 
@@ -39,11 +41,14 @@ function question(message, stat1, stat2, bonus){
     });
 }
 
-  console.log( jQuery( "div:first" ).text());
+  console.log( window.passage );
+
+  console.log( jQuery( "#passage" ));
   s.assertiveness = 0;
   s.patience = 0;
-  window.onload = question("Do you wanna get taller someday?",
+  question("Do you wanna get taller someday?",
     s.assertiveness, s.patience, 2);
+  console.log(s.assertiveness);
 %>
 
 You're a quagsire you beautiful you.
