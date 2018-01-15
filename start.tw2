@@ -15,9 +15,7 @@ I'm sure you know the drill. Answer my [[questions->FirstQuestion]] to the best 
 ::FirstQuestion
 Alright, here we go...
 
-[
-Question
-]{#question}
+<div id"question" onclick="window.story.state.testSA('hardy', 2);">Wassup </div>
 
 [
 Answer 1
@@ -52,3 +50,48 @@ function question(message, stat1, stat2, bonus){
 %>
 
 You're a quagsire you beautiful you.
+
+::Questions [script]
+
+var stats = [window.story.state.hardy, window.story.state.bold, window.story.state.modest, window.story.state.calm, window.story.state.timid,
+              window.story.state.lonely, window.story.state.docile, window.story.state.mild, window.story.state.gentle, window.story.state.hasty,
+              window.story.state.adamant, window.story.state.impish, window.story.state.bashful, window.story.state.careful, window.story.state.jolly,
+              window.story.state.naughty, window.story.state.lax, window.story.state.rash, window.story.state.quirky, window.story.state.naive,
+              window.story.state.brave, window.story.state.relaxed, window.story.state.quiet, window.story.state.sassy, window.story.state.serious];
+
+var addStat = function (stat, bonus){
+  switch(stat) {
+    case 'hardy'  : window.story.state.hardy   = window.story.state.hardy + bonus; break;
+    case 'bold'   : window.story.state.bold    = window.story.state.bold + bonus; break;
+    case 'modest' : window.story.state.modest  = window.story.state.modest + bonus; break;
+    case 'calm'   : window.story.state.calm    = window.story.state.calm + bonus; break;
+    case 'timid'  : window.story.state.timid   = window.story.state.timid + bonus; break;
+    case 'lonely' : window.story.state.lonely  = window.story.state.lonely + bonus; break;
+    case 'docile' : window.story.state.docile  = window.story.state.docile + bonus; break;
+    case 'mild'   : window.story.state.mild    = window.story.state.mild + bonus; break;
+    case 'gentle' : window.story.state.gentle  = window.story.state.gentle + bonus; break;
+    case 'hasty'  : window.story.state.hasty   = window.story.state.hasty + bonus; break;
+    case 'adamant': window.story.state.adamant = window.story.state.adamant + bonus; break;
+    case 'impish' : window.story.state.impish  = window.story.state.impish + bonus; break;
+    case 'bashful': window.story.state.bashful = window.story.state.bashful + bonus; break;
+    case 'careful': window.story.state.careful = window.story.state.careful + bonus; break;
+    case 'jolly'  : window.story.state.jolly   = window.story.state.jolly + bonus; break;
+    case 'naughty': window.story.state.naughty = window.story.state.naughty + bonus; break;
+    case 'lax'    : window.story.state.lax     = window.story.state.lax + bonus; break;
+    case 'rash'   : window.story.state.rash    = window.story.state.rash + bonus; break;
+    case 'quirky' : window.story.state.quirky  = window.story.state.quirky + bonus; break;
+    case 'naive'  : window.story.state.naive   = window.story.state.naive + bonus; break;
+    case 'brave'  : window.story.state.brave   = window.story.state.brave + bonus; break;
+    case 'relaxed': window.story.state.relaxed = window.story.state.relaxed + bonus; break;
+    case 'quiet'  : window.story.state.quiet   = window.story.state.quiet + bonus; break;
+    case 'sassy'  : window.story.state.sassy   = window.story.state.sassy + bonus; break;
+    case 'serious': window.story.state.serious = window.story.state.serious + bonus; break;
+  }
+};
+
+window.story.state.hardy = 0;
+
+ window.story.state.testSA = function(stat, bonus){
+  addStat(stat, bonus);
+  console.log("hardy-" + window.story.state.hardy);
+};
