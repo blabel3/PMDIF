@@ -59,6 +59,8 @@ var stats = [window.story.state.hardy, window.story.state.bold, window.story.sta
               window.story.state.naughty, window.story.state.lax, window.story.state.rash, window.story.state.quirky, window.story.state.naive,
               window.story.state.brave, window.story.state.relaxed, window.story.state.quiet, window.story.state.sassy, window.story.state.serious];
 
+//make stat an object with all of those as key value pairs. Then just refer to stats.whatever. Then I can add functions for checking highest and such.
+
 var addStat = function (stat, bonus){
   switch(stat) {
     case 'hardy'  : window.story.state.hardy   = window.story.state.hardy + bonus; break;
