@@ -15,7 +15,7 @@ I'm sure you know the drill. Answer my [[questions->FirstQuestion]] to the best 
 ::FirstQuestion
 Alright, here we go...
 
-<div id"question" onclick="window.story.state.testSA('hardy', 2);">Wassup </div>
+<div id"question" onclick="window.story.state.statAdd('jolly', 2);">Wassup </div>
 
 [
 Answer 1
@@ -53,47 +53,37 @@ You're a quagsire you beautiful you.
 
 ::Questions [script]
 
-var stats = [window.story.state.hardy, window.story.state.bold, window.story.state.modest, window.story.state.calm, window.story.state.timid,
-              window.story.state.lonely, window.story.state.docile, window.story.state.mild, window.story.state.gentle, window.story.state.hasty,
-              window.story.state.adamant, window.story.state.impish, window.story.state.bashful, window.story.state.careful, window.story.state.jolly,
-              window.story.state.naughty, window.story.state.lax, window.story.state.rash, window.story.state.quirky, window.story.state.naive,
-              window.story.state.brave, window.story.state.relaxed, window.story.state.quiet, window.story.state.sassy, window.story.state.serious];
+window.story.state.stats = {lonely: 0, jolly: 0, docile: 0, impish: 0, brave: 0,
+  timid: 0, quirky: 0, caring: 0, rash: 0, relaxed: 0, sassy: 0, gentle: 0,
+  hasty: 0, careful: 0, sensitive: 0, hardy: 0, careful: 0, sensitive: 0,
+  hardy: 0, modest: 0, proud: 0, honest: 0, bashful: 0, naive: 0, dedicated: 0,
+  clever: 0, curious: 0, rowdy: 0, dreamy: 0};
 
-//make stat an object with all of those as key value pairs. Then just refer to stats.whatever. Then I can add functions for checking highest and such.
+//REquires matching key from stats above!!
+var addStat = function (key, bonus){
+  window.story.state.stats[key] = window.story.state.stats[key] + bonus;
+}
 
-var addStat = function (stat, bonus){
-  switch(stat) {
-    case 'hardy'  : window.story.state.hardy   = window.story.state.hardy + bonus; break;
-    case 'bold'   : window.story.state.bold    = window.story.state.bold + bonus; break;
-    case 'modest' : window.story.state.modest  = window.story.state.modest + bonus; break;
-    case 'calm'   : window.story.state.calm    = window.story.state.calm + bonus; break;
-    case 'timid'  : window.story.state.timid   = window.story.state.timid + bonus; break;
-    case 'lonely' : window.story.state.lonely  = window.story.state.lonely + bonus; break;
-    case 'docile' : window.story.state.docile  = window.story.state.docile + bonus; break;
-    case 'mild'   : window.story.state.mild    = window.story.state.mild + bonus; break;
-    case 'gentle' : window.story.state.gentle  = window.story.state.gentle + bonus; break;
-    case 'hasty'  : window.story.state.hasty   = window.story.state.hasty + bonus; break;
-    case 'adamant': window.story.state.adamant = window.story.state.adamant + bonus; break;
-    case 'impish' : window.story.state.impish  = window.story.state.impish + bonus; break;
-    case 'bashful': window.story.state.bashful = window.story.state.bashful + bonus; break;
-    case 'careful': window.story.state.careful = window.story.state.careful + bonus; break;
-    case 'jolly'  : window.story.state.jolly   = window.story.state.jolly + bonus; break;
-    case 'naughty': window.story.state.naughty = window.story.state.naughty + bonus; break;
-    case 'lax'    : window.story.state.lax     = window.story.state.lax + bonus; break;
-    case 'rash'   : window.story.state.rash    = window.story.state.rash + bonus; break;
-    case 'quirky' : window.story.state.quirky  = window.story.state.quirky + bonus; break;
-    case 'naive'  : window.story.state.naive   = window.story.state.naive + bonus; break;
-    case 'brave'  : window.story.state.brave   = window.story.state.brave + bonus; break;
-    case 'relaxed': window.story.state.relaxed = window.story.state.relaxed + bonus; break;
-    case 'quiet'  : window.story.state.quiet   = window.story.state.quiet + bonus; break;
-    case 'sassy'  : window.story.state.sassy   = window.story.state.sassy + bonus; break;
-    case 'serious': window.story.state.serious = window.story.state.serious + bonus; break;
+var highest = function() {
+  var allstats = "";
+  var max = Math.max(...Object.values(window.story.state.stats));
+
+  var pairs = _.pairs(window.story.state.stats);
+
+  for (let [key, value] of pairs){
+    if(value == max){
+      allstats = allstats + " " + key;
+    }
   }
+
+  return allstats;
 };
 
-window.story.state.hardy = 0;
+//make a function that checks for the highest stat and can output the key of it.
 
- window.story.state.testSA = function(stat, bonus){
+ window.story.state.statAdd = function(stat, bonus){
   addStat(stat, bonus);
-  console.log("hardy-" + window.story.state.hardy);
+  addStat('hasty', bonus);
+  console.log(stat + " = " + window.story.state.stats[stat]);
+  console.log("Highest - " + highest());
 };
