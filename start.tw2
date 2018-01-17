@@ -19,12 +19,8 @@ You're in a free period with one of your good friends.
 Towards the end of the period, he says he didn't finish his homework for
 the next class and asks if he can copy yours. Do you let him?
 
-<div id="question" onclick="window.story.state.changeStats('jolly relaxed dreamy', 2);">Wassup </div>
-
-<div id="positive" class="answer" onclick="window.story.state.changeEachStat([['caring', 2], ['docile', 2], [gentle, 1]]);">Yes</div>
-<div id="negative" class="answer" onclick="window.story.state.changeEachStat([['dedicated', 2], ['brave', 2]]);">No</div>
-
-You're a quagsire you beautiful you.
+<div id="positive" class="answer" onclick="window.story.state.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);">Yes</div>
+<div id="negative" class="answer" onclick="window.story.state.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);">No</div>
 
 ::Questions [script]
 
@@ -67,10 +63,10 @@ window.story.state.changeStats = function(stats, bonus){
     //console.log(stat); checking that array splitting works correctly
     window.story.state.statChange(stat, bonus);
   }
+}
 
 window.story.state.changeEachStat = function(statChangeArray){
   for(let [stat, bonus] of statChangeArray){
     window.story.state.statChange(stat, bonus);
   }
-}
 }
