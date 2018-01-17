@@ -15,7 +15,8 @@ I'm sure you know the drill. Answer my [[questions->FirstQuestion]] to the best 
 ::FirstQuestion
 Alright, here we go...
 
-<div id"question" onclick="window.story.state.statAdd('jolly', 2);">Wassup </div>
+<div id"question" onclick="window.story.state.changeStats('jolly relaxed dreamy', 2);">Wassup </div>
+
 
 [
 Answer 1
@@ -23,31 +24,6 @@ Answer 1
 [
 Answer 2
 ]{#negative.answer}
-
-<%
-function question(message, stat1, stat2, bonus){
-  jQuery( "#positive" ).text( "Yes" );
-  $( "#positive" ).click(function() {
-    stat1 = stat1 + bonus;
-    s.show("Start");
-    console.log("assertiveness + " + bonus);
-    });
-  $( "#negative" ).text( "No" );
-  $( "#negative" ).click(function() {
-    stat2 = stat2 + bonus;
-    s.show("Start");
-    });
-}
-
-  console.log( window.passage );
-
-  console.log( jQuery( "#passage" ));
-  s.assertiveness = 0;
-  s.patience = 0;
-  question("Do you wanna get taller someday?",
-    s.assertiveness, s.patience, 2);
-  console.log(s.assertiveness);
-%>
 
 You're a quagsire you beautiful you.
 
@@ -79,11 +55,17 @@ var highest = function() {
   return allstats;
 };
 
-//make a function that checks for the highest stat and can output the key of it.
-
- window.story.state.statAdd = function(stat, bonus){
+ window.story.state.statChange = function(stat, bonus){
   addStat(stat, bonus);
-  addStat('hasty', bonus);
+  //addStat('hasty', bonus); checking that the error isn't whatever it got passed
   console.log(stat + " = " + window.story.state.stats[stat]);
   console.log("Highest - " + highest());
 };
+
+window.story.state.changeStats = function(stats, bonus){
+  var statsArray = stats.split(' ');
+  for (var stat of statsArray){
+    //console.log(stat); checking that array splitting works correctly
+    window.story.state.statChange(stat, bonus);
+  }
+}
