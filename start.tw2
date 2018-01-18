@@ -22,6 +22,18 @@ the next class and asks if he can copy yours. Do you let him?
 <div id="positive" class="answer" onclick="window.story.state.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);">Yes</div>
 <div id="negative" class="answer" onclick="window.story.state.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);">No</div>
 
+<div onclick="window.story.save();">Save</div>
+
+<div onclick="console.log(window.story.state.stats.brave);">loggerino</div>
+
+::SaveRestore [script]
+
+if(window.location.hash) {
+  var hash = window.location.hash.substring(1);
+  window.location = 'file:///mnt/share/Projects/PMDIF/docs/index.html';
+  window.story.restore(hash);
+}
+
 ::Questions [script]
 
 window.story.state.stats = {lonely: 0, jolly: 0, docile: 0, impish: 0, brave: 0,
