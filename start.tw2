@@ -34,7 +34,7 @@ body {
   0%   {background: red;}
   25%  {background: yellow;}
   50%  {background: green;}
-  75%  {background: teal;}
+  75%  {background: cyan;}
   100% {background: red;}
 }
 
@@ -43,7 +43,7 @@ body {
   0%   {background: red;}
   25%  {background: yellow;}
   50%  {background: green;}
-  75%  {background: teal;}
+  75%  {background: cyan;}
   100% {background: red;}
 }
 </style>
