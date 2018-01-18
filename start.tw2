@@ -22,6 +22,32 @@ the next class and asks if he can copy yours. Do you let him?
 <div id="positive" class="answer" onclick="window.story.state.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);">Yes</div>
 <div id="negative" class="answer" onclick="window.story.state.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);">No</div>
 
+<style>
+body {
+  animation: colorchange 20s infinite; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: green;}
+  75%  {background: teal;}
+  100% {background: red;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: green;}
+  75%  {background: teal;}
+  100% {background: red;}
+}
+</style>
+
 ::Questions [script]
 
 window.story.state.stats = {lonely: 0, jolly: 0, docile: 0, impish: 0, brave: 0,
@@ -70,3 +96,5 @@ window.story.state.changeEachStat = function(statChangeArray){
     window.story.state.statChange(stat, bonus);
   }
 }
+
+::Background [stylesheet]
