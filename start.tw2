@@ -30,7 +30,6 @@ the next class and asks if he can copy yours. Do you let him?
 
 if(window.location.hash) {
   var hash = window.location.hash.substring(1);
-  window.location = 'file:///mnt/share/Projects/PMDIF/docs/index.html';
   window.story.restore(hash);
 }
 
