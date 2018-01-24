@@ -31,21 +31,34 @@ body {
 
 @keyframes colorchange
 {
-  0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: green;}
-  75%  {background: cyan;}
-  100% {background: red;}
+  0%   {background: hsl(0, 100%, 50%);}
+  10%  {background: hsl(36, 100%, 50%);}
+  20%  {background: hsl(72, 100%, 50%);}
+  30%  {background: hsl(108, 100%, 50%);}
+  40%  {background: hsl(144, 100%, 50%);}
+  50%  {background: hsl(180, 100%, 50%);}
+  60%  {background: hsl(216, 100%, 60%);}
+  70%  {background: hsl(252, 100%, 70%);}
+  80%  {background: hsl(286, 100%, 60%);}
+  90%  {background: hsl(324, 100%, 50%);}
+  100% {background: hsl(360, 100%, 50%);}
 }
 
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
 {
-  0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: green;}
-  75%  {background: cyan;}
-  100% {background: red;}
+  0%   {background: hsl(0, 100%, 50%);}
+  10%  {background: hsl(36, 100%, 50%);}
+  20%  {background: hsl(72, 100%, 50%);}
+  30%  {background: hsl(108, 100%, 50%);}
+  40%  {background: hsl(144, 100%, 50%);}
+  50%  {background: hsl(180, 100%, 50%);}
+  60%  {background: hsl(216, 100%, 60%);}
+  70%  {background: hsl(252, 100%, 70%);}
+  80%  {background: hsl(286, 100%, 60%);}
+  90%  {background: hsl(324, 100%, 50%);}
+  100% {background: hsl(360, 100%, 50%);}
 }
+
 </style>
 
 ::Questions [script]
