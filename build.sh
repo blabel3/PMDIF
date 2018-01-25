@@ -1,1 +1,1 @@
-twee2 build src/* index.html
+twee2 build src/start.tw2 index.html
