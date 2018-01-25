@@ -24,8 +24,6 @@ the next class and asks if he can copy yours. Do you let him?
 
 <div onclick="window.story.save();">Save</div>
 
-<div onclick="console.log(window.story.state.stats.brave);">loggerino</div>
-
 ::SaveRestore [script]
 
 if(window.location.hash) {
