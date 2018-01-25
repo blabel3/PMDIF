@@ -1,0 +1,60 @@
+::FirstQuestion
+Alright, here we go...
+
+You're in a free period with one of your good friends.
+Towards the end of the period, he says he didn't finish his homework for
+the next class and asks if he can copy yours. Do you let him?
+
+<div id="positive" class="answer" onclick="window.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);">Yes</div>
+<div id="negative" class="answer" onclick="window.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);">No</div>
+
+<div onclick="window.story.save();">Save</div>
+
+::Questions [script]
+
+window.story.state.stats = {lonely: 0, jolly: 0, docile: 0, impish: 0, brave: 0,
+  timid: 0, quirky: 0, caring: 0, rash: 0, relaxed: 0, sassy: 0, gentle: 0,
+  hasty: 0, careful: 0, sensitive: 0, hardy: 0, careful: 0, sensitive: 0,
+  hardy: 0, modest: 0, proud: 0, honest: 0, bashful: 0, naive: 0, dedicated: 0,
+  clever: 0, curious: 0, rowdy: 0, dreamy: 0};
+
+//REquires matching key from stats above!!
+var addStat = function (key, bonus){
+  window.story.state.stats[key] = window.story.state.stats[key] + bonus;
+}
+
+var highest = function() {
+  var allstats = "";
+  var max = Math.max(...Object.values(window.story.state.stats));
+
+  var pairs = _.pairs(window.story.state.stats);
+
+  for (let [key, value] of pairs){
+    if(value == max){
+      allstats = allstats + " " + key;
+    }
+  }
+
+  return allstats;
+};
+
+ function statChange (stat, bonus){
+  addStat(stat, bonus);
+  //addStat('hasty', bonus); checking that the error isn't whatever it got passed
+  console.log(stat + " = " + window.story.state.stats[stat]);
+  //console.log("Highest - " + highest());
+};
+
+function changeStats (stats, bonus){
+  var statsArray = stats.split(' ');
+  for (var stat of statsArray){
+    //console.log(stat); checking that array splitting works correctly
+    statChange(stat, bonus);
+  }
+}
+
+window.changeEachStat = function(statChangeArray){
+  for(let [stat, bonus] of statChangeArray){
+    statChange(stat, bonus);
+  }
+}
