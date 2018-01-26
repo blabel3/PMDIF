@@ -1,7 +1,7 @@
 ::FirstQuestion
 Alright, here we go...
 
-<%= window.story.state.questions[0].text %>
+<%= window.story.state.questions[Math.floor(Math.random() * window.story.state.questions.length)].text %>
 
 <div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].affirmativeStats);">Yes</div>
 <div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].dissentingStats);">No</div>
