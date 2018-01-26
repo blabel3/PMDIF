@@ -1,12 +1,10 @@
 ::FirstQuestion
 Alright, here we go...
 
-You're in a free period with one of your good friends.
-Towards the end of the period, he says he didn't finish his homework for
-the next class and asks if he can copy yours. Do you let him?
+<%= window.story.state.questions[0].text %>
 
-<div id="positive" class="answer" onclick="window.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);">Yes</div>
-<div id="negative" class="answer" onclick="window.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);">No</div>
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].affirmativeStats);">Yes</div>
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].dissentingStats);">No</div>
 
 <div onclick="window.story.save();">Save</div>
 
