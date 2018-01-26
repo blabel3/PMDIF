@@ -6,7 +6,7 @@ Alright, here we go...
 <div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].affirmativeStats);">Yes</div>
 <div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].dissentingStats);">No</div>
 
-<div onclick="window.story.save();">Save</div>
+<!--div onclick="window.story.save();">Save</div-->
 
 ::StoryIncludes
 
