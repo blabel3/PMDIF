@@ -21,11 +21,11 @@ window.story.state.stats = {lonely: 0, jolly: 0, docile: 0, impish: 0, brave: 0,
   clever: 0, curious: 0, rowdy: 0, dreamy: 0};
 
 //REquires matching key from stats above!!
-var addStat = function (key, bonus){
+function addStat (key, bonus){
   window.story.state.stats[key] = window.story.state.stats[key] + bonus;
 }
 
-var highest = function() {
+function highest () {
   var allstats = "";
   var max = Math.max(...Object.values(window.story.state.stats));
 
@@ -60,18 +60,32 @@ window.changeEachStat = function(statChangeArray){
     statChange(stat, bonus);
   }
 }
+//Question constructor
+function Question (text, affirmativeStats, dissentingStats) {
+  this.text = text;
+  this.affirmativeStats = affirmativeStats;
+  this.dissentingStats = dissentingStats;
+}
+
+window.story.state.questions = [
+  new Question("You're in a free period with one of your good friends. \
+  Towards the end of the period, he says he didn't finish his homework for the \
+  next class and asks if he can copy yours. Do you let him?",
+  [ ['caring', 2], ['docile', 2], ['gentle', 1] ],
+  [ ['dedicated', 2], ['brave', 2] ])
+];
+
+window.story.state.currentQuestion = window.story.state.questions[0];
 </script><tw-passagedata pid="1" name="Start" tags="" position=""># Welcome to the world of Pokemon!
 You've been brought here by an unknown force, and it's my job to match your spirit to a Pokemon.
 I'm sure you know the drill. Answer my [[questions-&gt;FirstQuestion]] to the best of your ability, please!
 
 &lt;% $( "div:first" ).click(console.log("haha yes")); %&gt;</tw-passagedata><tw-passagedata pid="2" name="FirstQuestion" tags="" position="">Alright, here we go...
 
-You're in a free period with one of your good friends.
-Towards the end of the period, he says he didn't finish his homework for
-the next class and asks if he can copy yours. Do you let him?
+&lt;%= window.story.state.questions[0].text %&gt;
 
-&lt;div id="positive" class="answer" onclick="window.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);"&gt;Yes&lt;/div&gt;
-&lt;div id="negative" class="answer" onclick="window.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);"&gt;No&lt;/div&gt;
+&lt;div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].affirmativeStats);"&gt;Yes&lt;/div&gt;
+&lt;div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].dissentingStats);"&gt;No&lt;/div&gt;
 
 &lt;div onclick="window.story.save();"&gt;Save&lt;/div&gt;</tw-passagedata></tw-storydata>
 
