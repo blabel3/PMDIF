@@ -1,12 +1,37 @@
 ::FirstQuestion
 Alright, here we go...
 
-<%= window.story.state.questions[Math.floor(Math.random() * window.story.state.questions.length)].text %>
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex];
+   s.questions.splice(s.questionIndex, 1); %>
 
-<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].affirmativeStats);">Yes</div>
-<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.questions[0].dissentingStats);">No</div>
+<%= s.currentQuestion.text %>
+
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">[[Yes->SecondQuestion]]</div>
+or
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">[[No->SecondQuestion]]</div>
+
+[[<%= s.currentQuestion.text %>->SecondQuestion]]
 
 <!--div onclick="window.story.save();">Save</div-->
+
+::SecondQuestion
+
+Hmm... how about this?
+
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex]; %>
+
+<%= s.currentQuestion.text %>
+
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">Yes</div>
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">No</div>
+
+::QuestionStyles [stylesheet]
+
+.answer {
+  display: inline-block;
+}
 
 ::StoryIncludes
 
