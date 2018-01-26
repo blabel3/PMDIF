@@ -7,11 +7,14 @@ Alright, here we go...
 
 <%= s.currentQuestion.text %>
 
-<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">[[Yes->SecondQuestion]]</div>
-or
-<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">[[No->SecondQuestion]]</div>
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  [[<%= s.currentQuestion.affirmativeText %>->SecondQuestion]]
+</div>
+<br>
 
-[[<%= s.currentQuestion.text %>->SecondQuestion]]
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  [[<%= s.currentQuestion.dissentingText %>->SecondQuestion]]
+</div>
 
 <!--div onclick="window.story.save();">Save</div-->
 
@@ -24,8 +27,14 @@ Hmm... how about this?
 
 <%= s.currentQuestion.text %>
 
-<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">Yes</div>
-<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">No</div>
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  <%= s.currentQuestion.affirmativeText %>
+</div>
+<br>
+
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  <%= s.currentQuestion.dissentingText %>
+</div>
 
 ::QuestionStyles [stylesheet]
 
