@@ -65,4 +65,5 @@ window.story.state.questions = [
   [ ['docile', 2], ['gentle', 1] ])
 ];
 
-window.story.state.currentQuestion = window.story.state.questions[0];
+window.story.state.questionIndex = 0;
+window.story.state.currentQuestion = window.story.state.questions[window.story.state.questionIndex];
