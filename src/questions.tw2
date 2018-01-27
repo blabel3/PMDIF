@@ -31,7 +31,6 @@ Hmm... how about this?
   <%= s.currentQuestion.affirmativeText %>
 </div>
 <br>
-
 <div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
   <%= s.currentQuestion.dissentingText %>
 </div>
