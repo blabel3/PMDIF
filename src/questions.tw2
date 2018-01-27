@@ -1,4 +1,4 @@
-::FirstQuestion
+::Question1
 Alright, here we go...
 
 <% s.questionIndex = Math.floor(Math.random() * s.questions.length);
@@ -17,7 +17,7 @@ Alright, here we go...
 
 <!--div onclick="window.story.save();">Save</div-->
 
-::SecondQuestion
+::Question2
 
 Hmm... how about this?
 
@@ -33,12 +33,6 @@ Hmm... how about this?
 <div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
   <%= s.currentQuestion.dissentingText %>
 </div>
-
-::QuestionStyles [stylesheet]
-
-.answer {
-  display: inline-block;
-}
 
 ::StoryIncludes
 
