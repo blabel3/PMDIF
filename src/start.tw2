@@ -13,6 +13,6 @@ I'm sure you know the drill. Answer my [[questions->Question1]] to the best of y
 <% $( "div:first" ).click(console.log("haha yes")); %>
 
 ::StoryIncludes
-src/questions.tw2
+src/quiz.tw2
 
 src/saving.tw2

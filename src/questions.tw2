@@ -1,39 +1,26 @@
-::Question1
-Alright, here we go...
+::Questions [script]
 
-<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
-   s.currentQuestion = s.questions[s.questionIndex];
-   s.questions.splice(s.questionIndex, 1); %>
+//Question constructor
+function Question (text, affirmativeText, affirmativeStats, dissentingText, dissentingStats) {
+  this.text = text;
+  this.affirmativeText = affirmativeText;
+  this.affirmativeStats = affirmativeStats;
+  this.dissentingText = dissentingText;
+  this.dissentingStats = dissentingStats;
+}
 
-<%= s.currentQuestion.text %>
+window.story.state.questions = [
+  new Question("You're in a free period with one of your good friends. Towards the end of the period, he says he didn't finish his homework for the next class and asks if he can copy yours. Do you let him?",
+    "Yes",
+    [ ['caring', 2], ['docile', 2], ['gentle', 1] ],
+    "No",
+    [ ['dedicated', 2], ['brave', 2] ]),
+  new Question("One of your closest friends didn’t come out to school today; turns out they’re in the hospital, sick like the dickens! What do you do?",
+    "Finish school early and visit them",
+    [ ['brave', 1], ['caring', 2], ['dedicated', 2] ],
+    "Send them flowers and a get-well-soon letter later",
+    [ ['docile', 2], ['gentle', 1] ])
+];
 
-<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
-  [[<%= s.currentQuestion.affirmativeText %>->SecondQuestion]]
-</div>
-<br>
-<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
-  [[<%= s.currentQuestion.dissentingText %>->SecondQuestion]]
-</div>
-
-<!--div onclick="window.story.save();">Save</div-->
-
-::Question2
-
-Hmm... how about this?
-
-<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
-   s.currentQuestion = s.questions[s.questionIndex]; %>
-
-<%= s.currentQuestion.text %>
-
-<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
-  <%= s.currentQuestion.affirmativeText %>
-</div>
-<br>
-<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
-  <%= s.currentQuestion.dissentingText %>
-</div>
-
-::StoryIncludes
-
-src/question-script.tw2
+window.story.state.questionIndex = 0;
+window.story.state.currentQuestion = window.story.state.questions[window.story.state.questionIndex];

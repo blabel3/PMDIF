@@ -52,30 +52,3 @@ window.changeEachStat = function(statChangeArray){
 .answer {
   display: inline-block;
 }
-
-::Questions [script]
-
-//Question constructor
-function Question (text, affirmativeText, affirmativeStats, dissentingText, dissentingStats) {
-  this.text = text;
-  this.affirmativeText = affirmativeText;
-  this.affirmativeStats = affirmativeStats;
-  this.dissentingText = dissentingText;
-  this.dissentingStats = dissentingStats;
-}
-
-window.story.state.questions = [
-  new Question("You're in a free period with one of your good friends. Towards the end of the period, he says he didn't finish his homework for the next class and asks if he can copy yours. Do you let him?",
-  "Yes",
-  [ ['caring', 2], ['docile', 2], ['gentle', 1] ],
-  "No",
-  [ ['dedicated', 2], ['brave', 2] ]),
-  new Question("One of your closest friends didn’t come out to school today; turns out they’re in the hospital, sick like the dickens! What do you do?",
-  "Finish school early and visit them",
-  [ ['brave', 1], ['caring', 2], ['dedicated', 2] ],
-  "Send them flowers and a get-well-soon letter later",
-  [ ['docile', 2], ['gentle', 1] ])
-];
-
-window.story.state.questionIndex = 0;
-window.story.state.currentQuestion = window.story.state.questions[window.story.state.questionIndex];
