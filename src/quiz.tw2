@@ -34,6 +34,34 @@ Hmm... how about this?
   <%= s.currentQuestion.dissentingText %>
 </div>
 
+::Question3
+
+empty rn
+
+::Question4
+
+empty rn
+
+::Question5
+
+empty rn
+
+::Question6
+
+empty rn
+
+::Question7
+
+empty rn
+
+::Question8
+
+empty rn
+
+::Question9
+
+empty rn
+
 ::StoryIncludes
 
 src/question-helper.tw2
