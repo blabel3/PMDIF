@@ -47,6 +47,12 @@ window.changeEachStat = function(statChangeArray){
   }
 }
 
+::QuestionStyles [stylesheet]
+
+.answer {
+  display: inline-block;
+}
+
 ::Questions [script]
 
 //Question constructor
