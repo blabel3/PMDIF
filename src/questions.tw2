@@ -1,14 +1,46 @@
 ::FirstQuestion
 Alright, here we go...
 
-You're in a free period with one of your good friends.
-Towards the end of the period, he says he didn't finish his homework for
-the next class and asks if he can copy yours. Do you let him?
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex];
+   s.questions.splice(s.questionIndex, 1); %>
 
-<div id="positive" class="answer" onclick="window.changeEachStat([ ['caring', 2], ['docile', 2], ['gentle', 1] ]);">Yes</div>
-<div id="negative" class="answer" onclick="window.changeEachStat([ ['dedicated', 2], ['brave', 2] ]);">No</div>
+<%= s.currentQuestion.text %>
 
-<div onclick="window.story.save();">Save</div>
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  [[<%= s.currentQuestion.affirmativeText %>->SecondQuestion]]
+</div>
+<br>
+
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  [[<%= s.currentQuestion.dissentingText %>->SecondQuestion]]
+</div>
+
+<!--div onclick="window.story.save();">Save</div-->
+
+::SecondQuestion
+
+Hmm... how about this?
+
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex]; %>
+
+<%= s.currentQuestion.text %>
+
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  <%= s.currentQuestion.affirmativeText %>
+</div>
+<br>
+
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  <%= s.currentQuestion.dissentingText %>
+</div>
+
+::QuestionStyles [stylesheet]
+
+.answer {
+  display: inline-block;
+}
 
 ::StoryIncludes
 
