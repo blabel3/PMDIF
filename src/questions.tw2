@@ -11,7 +11,6 @@ Alright, here we go...
   [[<%= s.currentQuestion.affirmativeText %>->SecondQuestion]]
 </div>
 <br>
-
 <div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
   [[<%= s.currentQuestion.dissentingText %>->SecondQuestion]]
 </div>
