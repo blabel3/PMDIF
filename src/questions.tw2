@@ -16,15 +16,20 @@ window.story.state.questions = [
     "No, that'd be cheating!",
     [ ['dedicated', 2], ['brave', 2] ]),
   new Question("One of your closest friends didn’t come out to school today; turns out they’re in the hospital, sick like the dickens! What do you do?",
-    "Finish school early and visit them",
+    "Finish school early and visit them!",
     [ ['brave', 1], ['caring', 2], ['dedicated', 2] ],
-    "Send them flowers and a get-well-soon letter later",
+    "Send them flowers and a get-well-soon letter later.",
     [ ['docile', 2], ['gentle', 1] ]),
   new Question("You have to go up to the top floor, but the elevator up closes right before your eyes! What do you do?",
     "Wait for the elevator to come back…",
     [ ['docile', 1], ['dedicated', 1] ],
     "Who needs elevators? We have stairs!",
-    [ ['brave', 2] ['hardy', 2] ])
+    [ ['brave', 2] ['hardy', 2] ]),
+  new Question("You're walking along the street and you find a wallet; inside there is 100$ but no ID. What do you do next?",
+    "Turn it into the police, it's the right thing to do.",
+    [ ['honest', 1], ['caring', 1], ['careful', 1], ['dedicated', 2] ],
+    "Finder's keepers!",
+    [ ['rash', 1], ['hasty', 1], ['rowdy', 1], ['jolly', 1], ['relaxed', 1] ]),
 ];
 
 window.story.state.questionIndex = 0;
