@@ -40,4 +40,4 @@ Just run the build script and done!
 ./build.sh
 ```
 
-[1](https://blabel3.github.io/PMDIF/)
+[1]: https://blabel3.github.io/PMDIF/
