@@ -22,29 +22,72 @@ Alright, here we go...
 Hmm... how about this?
 
 <% s.questionIndex = Math.floor(Math.random() * s.questions.length);
-   s.currentQuestion = s.questions[s.questionIndex]; %>
+   s.currentQuestion = s.questions[s.questionIndex];
+   s.questions.splice(s.questionIndex, 1); %>
 
 <%= s.currentQuestion.text %>
 
 <div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
-  <%= s.currentQuestion.affirmativeText %>
+  [[<%= s.currentQuestion.affirmativeText %>->Question3]]
 </div>
 <br>
 <div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
-  <%= s.currentQuestion.dissentingText %>
+  [[<%= s.currentQuestion.dissentingText %>->Question3]]
 </div>
 
 ::Question3
 
-empty rn
+Interesting... try this one?
+
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex];
+   s.questions.splice(s.questionIndex, 1); %>
+
+<%= s.currentQuestion.text %>
+
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  [[<%= s.currentQuestion.affirmativeText %>->Question4]]
+</div>
+<br>
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  [[<%= s.currentQuestion.dissentingText %>->Question4]]
+</div>
 
 ::Question4
 
-empty rn
+I think I'm getting a feel for you. Now...
+
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex];
+   s.questions.splice(s.questionIndex, 1); %>
+
+<%= s.currentQuestion.text %>
+
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  [[<%= s.currentQuestion.affirmativeText %>->Question5]]
+</div>
+<br>
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  [[<%= s.currentQuestion.dissentingText %>->Question5]]
+</div>
 
 ::Question5
 
-empty rn
+Almost there! Last one.
+
+<% s.questionIndex = Math.floor(Math.random() * s.questions.length);
+   s.currentQuestion = s.questions[s.questionIndex];
+   s.questions.splice(s.questionIndex, 1); %>
+
+<%= s.currentQuestion.text %>
+
+<div id="positive" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.affirmativeStats);">
+  [[<%= s.currentQuestion.affirmativeText %>->Results]]
+</div>
+<br>
+<div id="negative" class="answer" onclick="window.changeEachStat(window.story.state.currentQuestion.dissentingStats);">
+  [[<%= s.currentQuestion.dissentingText %>->Results]]
+</div>
 
 ::Question6
 
@@ -61,6 +104,8 @@ empty rn
 ::Question9
 
 empty rn
+
+::Results
 
 ::StoryIncludes
 
