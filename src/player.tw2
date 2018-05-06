@@ -1,0 +1,171 @@
+::Player [script]
+
+function Player (name, gender, pokemon) {
+  this.name = name;
+  this.gender = gender;
+  this.pokemon = pokemon;
+}
+
+function Pokemon (species, types, stance) {
+  this.species = species;
+  this.types = types;
+  this.stance = stance;
+}
+
+function Pokemon (species){
+  this.species = species;
+  switch (species) {
+    case 'Bulbasaur' :
+      this.types = ["grass", "poison"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Squirtle'  :
+      this.types = ["water"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Charmander':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Pikachu':
+      this.types = ["electric"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Meowth':
+      this.types = ["normal"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Psyduck':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Machop':
+      this.types = ["fighting"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Cubone':
+      this.types = ["ground"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Eevee':
+      this.types = ["normal"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Chikorita':
+      this.types = ["grass"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Totodile':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Cyndaquil':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Wooper':
+      this.types = ["water", "ground"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Treecko':
+      this.types = ["grass"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Mudkip':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Torchic':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Skitty':
+      this.types = ["normal"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Turtwig':
+      this.types = ["grass"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Chimchar':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Piplup':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Munchlax':
+      this.types = ["normal"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Vulpix':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Phanpy':
+      this.types = ["ground"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Shinx':
+      this.types = ["electric"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Riolu':
+      this.types = ["fighting"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Snivy':
+      this.types = ["grass"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Tepig':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Oshawott':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Chespin':
+      this.types = ["grass"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+    case 'Fennekin':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Froakie':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Litten':
+      this.types = ["fire"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Popplio':
+      this.types = ["water"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Rowlet':
+      this.types = ["grass"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    case 'Rockruff':
+      this.types = ["rock"];
+      this.stance = window.StanceEnum.QUADRUPED;
+      break;
+    default:
+      this.types = ["water", "ground"];
+      this.stance = window.StanceEnum.BIPEDAL;
+      break;
+  }
+}
+
+window.StanceEnum = {
+  BIPEDAL: 2,
+  QUADRUPED: 4,
+  function hasArms(pokemon){
+    return (pokemon.species != 'wooper' && pokemon.stance == this.BIPEDAL);
+  }
+};
