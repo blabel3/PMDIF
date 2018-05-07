@@ -11,7 +11,7 @@ function addStat (key, bonus){
   window.story.state.stats[key] = window.story.state.stats[key] + bonus;
 }
 
-function highest () {
+window.highest = function() {
   var allstats = "";
   var max = Math.max(...Object.values(window.story.state.stats));
 
@@ -19,9 +19,11 @@ function highest () {
 
   for (let [key, value] of pairs){
     if(value == max){
-      allstats = allstats + " " + key;
+      allstats = key;
     }
   }
+
+  delete window.story.state.stats[allstats];
 
   return allstats;
 };

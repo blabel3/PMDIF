@@ -91,7 +91,7 @@ Almost there! Last one.
 
 ::Question6
 
-empty rn  
+empty rn
 
 ::Question7
 
@@ -106,6 +106,21 @@ empty rn
 empty rn
 
 ::Results
+
+<% s.highest = window.highest();
+   s.second = window.highest();
+   console.log(s.highest);
+   console.log(s.second); %>
+
+<% switch (s.highest){
+    case "dedicated":
+      //
+      break;
+    case "caring":
+      //
+      break;
+    }
+    %>
 
 ::StoryIncludes
 
