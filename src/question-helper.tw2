@@ -34,8 +34,7 @@ window.highest = function() {
 
  function statChange (stat, bonus){
   addStat(stat, bonus);
-  //addStat('hasty', bonus); checking that the error isn't whatever it got passed
-  console.log(stat + " = " + window.story.state.stats[stat]);
+  //console.log(stat + " = " + window.story.state.stats[stat]);
   //console.log("Highest - " + highest());
 };
 

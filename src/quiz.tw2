@@ -112,11 +112,7 @@ empty rn
    s.third = window.highest();
    s.fourth = window.highest();
    s.fifth = window.highest();
-   console.log(s.first);
-   console.log(s.second);
-   console.log(s.third);
-   console.log(s.fourth);
-   console.log(s.fifth); %>
+   console.log(s.first + s.second + s.third + s.fourth + s.fifth); %>
 
 <%= window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth) %>
 

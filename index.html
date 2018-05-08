@@ -51,8 +51,7 @@ window.highest = function() {
 
  function statChange (stat, bonus){
   addStat(stat, bonus);
-  //addStat('hasty', bonus); checking that the error isn't whatever it got passed
-  console.log(stat + " = " + window.story.state.stats[stat]);
+  //console.log(stat + " = " + window.story.state.stats[stat]);
   //console.log("Highest - " + highest());
 };
 
@@ -477,11 +476,7 @@ I'm sure you know the drill. Answer my [[questions-&gt;Question1]] to the best o
    s.third = window.highest();
    s.fourth = window.highest();
    s.fifth = window.highest();
-   console.log(s.first);
-   console.log(s.second);
-   console.log(s.third);
-   console.log(s.fourth);
-   console.log(s.fifth); %&gt;
+   console.log(s.first + s.second + s.third + s.fourth + s.fifth); %&gt;
 
 &lt;%= window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth) %&gt;</tw-passagedata></tw-storydata>
 
