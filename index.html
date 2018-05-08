@@ -145,6 +145,7 @@ function Pokemon (species, types, stance) {
   this.stance = stance;
 }
 
+/*
 function Pokemon (species){
   this.species = species;
   switch (species) {
@@ -293,10 +294,100 @@ function Pokemon (species){
       this.stance = window.StanceEnum.BIPEDAL;
       break;
   }
+} */
+
+window.resultSpecies = function(first, second, third, fourth, fifth){
+  switch (first){
+    case 'a':
+      switch (second){
+        case 'c': return 'Bulbasaur';
+        case 'e': return 'Eevee';
+        case 'o':
+          switch (third){
+            case 'c':
+              switch (fourth){
+                case 'e': return 'Chikorita';
+                case 'n': return 'Wooper';
+              }
+            case e:
+              switch (fourth){
+                case 'c': return 'Munchlax';
+                case 'n': return 'Phanpy';
+              }
+            case n: return 'Popplio';
+          }
+      }
+    case 'c':
+      switch (second){
+        case 'a':
+          switch (third){
+            case 'e': return 'Cyndaquil';
+            case 'n': return 'Turtwig';
+            case 'o': return 'Riolu';
+          }
+        case 'n':
+          switch (third){
+            case 'a': return 'Treeko';
+            case 'e': return 'Fennekin';
+            case 'o': return 'Rowlet';
+          }
+        case 'o': return 'Cubone';
+      }
+    case 'e':
+      switch (second){
+        case 'a':
+          switch (third){
+            case 'c': return 'Chimchar';
+            case 'n': return 'Oshawott';
+            case 'o': return 'Rockruff';
+          }
+        case 'n':
+          switch (third){
+            case 'a': return 'Machop';
+            case 'c': return 'Totodile';
+            case 'o': return 'Litten';
+          }
+        case 'o': return 'Pikachu';
+      }
+    case 'n':
+      switch (second){
+        case 'a': return 'Meowth';
+        case 'c':
+          switch (third){
+            case 'a': return 'Torchic';
+            case 'e': return 'Shinx';
+            case 'o':
+              switch (fourth){
+                case 'a': return 'Snivy';
+                case 'e': return 'Froakie';
+              }
+          }
+        case 'e': return 'Charmander';
+        case 'o': return 'Piplup';
+      }
+    case 'o':
+      switch (second){
+        case 'c':
+          switch (third){
+            case 'a': return 'Mudkip';
+            case 'n': return 'Vulpix';
+          }
+        case 'e':
+          switch (third){
+            case 'a':
+              switch (fourth){
+                case 'c': return 'Squirtle';
+                case 'n': return 'Skitty';
+              }
+            case 'c': return 'Tepig';
+            case 'n': return 'Chespin';
+          }
+        case 'n': return 'Psyduck';
+      }
+  }
 }
 
-
-
+/*
 window.StanceEnum = {
   BIPEDAL: 2,
   QUADRUPED: 4,
@@ -304,6 +395,7 @@ window.StanceEnum = {
     return (pokemon.species != 'wooper' && pokemon.stance == this.BIPEDAL);
   }
 };
+*/
 </script><tw-passagedata pid="1" name="Start" tags="" position=""># Welcome to the world of Pokemon!
 You've been brought here by an unknown force, and it's my job to match your spirit to a Pokemon.
 I'm sure you know the drill. Answer my [[questions-&gt;Question1]] to the best of your ability, please!

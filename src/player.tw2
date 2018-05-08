@@ -12,6 +12,7 @@ function Pokemon (species, types, stance) {
   this.stance = stance;
 }
 
+/*
 function Pokemon (species){
   this.species = species;
   switch (species) {
@@ -160,7 +161,7 @@ function Pokemon (species){
       this.stance = window.StanceEnum.BIPEDAL;
       break;
   }
-}
+} */
 
 window.resultSpecies = function(first, second, third, fourth, fifth){
   switch (first){
@@ -253,6 +254,7 @@ window.resultSpecies = function(first, second, third, fourth, fifth){
   }
 }
 
+/*
 window.StanceEnum = {
   BIPEDAL: 2,
   QUADRUPED: 4,
@@ -260,3 +262,4 @@ window.StanceEnum = {
     return (pokemon.species != 'wooper' && pokemon.stance == this.BIPEDAL);
   }
 };
+*/
