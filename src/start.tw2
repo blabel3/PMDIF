@@ -6,6 +6,7 @@ Twee2::build_config.story_format = 'Snowman'
 PMDIF
 
 ::Start
+
 # Welcome to the world of Pokemon!
 You've been brought here by an unknown force, and it's my job to match your spirit to a Pokemon.
 I'm sure you know the drill. Answer my [[questions->Question1]] to the best of your ability, please!
