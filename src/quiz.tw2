@@ -127,6 +127,12 @@ empty rn
 
 <%= window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth) %>
 
+<% var pokemon = new Pokemon(window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth));
+   console.log(pokemon.types);
+   s.player = new Player('Blake', 'male', pokemon);
+   console.log(s.player);
+   %>
+
 ::StoryIncludes
 
 src/question-helper.tw2
