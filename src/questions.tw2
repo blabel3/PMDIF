@@ -24,7 +24,7 @@ window.story.state.questions = [
     "Wait for the elevator to come back…",
     [ ['o', -1], ['n', 1] ],
     "Who needs elevators? We have stairs!",
-    [ ['o', 2] ['c', -1], ['e', -1] ]),
+    [ ['o', 2], ['c', -1], ['e', -1] ]),
   new Question("You're walking along the street and you find a wallet; inside there is 100$ but no ID. What do you do next?",
     "Turn it into the police, it's the right thing to do.",
     [ ['c', 1], ['e', 1], ['a', 1] ],

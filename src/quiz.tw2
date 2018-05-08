@@ -107,12 +107,18 @@ empty rn
 
 ::Results
 
-<% s.highest = window.highest();
+<% s.first = window.highest();
    s.second = window.highest();
-   console.log(s.highest);
-   console.log(s.second); %>
+   s.third = window.highest();
+   s.fourth = window.highest();
+   s.fifth = window.highest();
+   console.log(s.first);
+   console.log(s.second);
+   console.log(s.third);
+   console.log(s.fourth);
+   console.log(s.fifth); %>
 
-<% switch (s.highest){
+<% switch (s.first){
     case "dedicated":
       //
       break;
