@@ -118,20 +118,26 @@ empty rn
 
 ::Results
 
-<% s.first = window.highest();
-   s.second = window.highest();
-   s.third = window.highest();
-   s.fourth = window.highest();
-   s.fifth = window.highest();
+### Done!
+
+Based on what I've gleaned about you:
+
+<% s.first = highest();
+   s.second = highest();
+   s.third = highest();
+   s.fourth = highest();
+   s.fifth = highest();
    console.log(s.first + s.second + s.third + s.fourth + s.fifth); %>
 
-<%= window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth) %>
+<%= traitBlurbs(s.first) %>
 
-<% var pokemon = new Pokemon(window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth));
-   console.log(pokemon.types);
-   s.player = new Player('Blake', 'male', pokemon);
-   console.log(s.player);
-   %>
+<%= traitBlurbs(s.second) %>
+
+<% var pokemon = new Pokemon(resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth));
+   s.player = new Player('name', 'gender', pokemon);
+   console.log(s.player); %>
+
+A person like that... would be perfect as the <%= s.player.pokemon.types[0] %>-type, <%= s.player.pokemon.species %>!
 
 ::StoryIncludes
 

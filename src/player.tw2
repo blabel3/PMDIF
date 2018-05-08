@@ -253,3 +253,18 @@ window.resultSpecies = function(first, second, third, fourth, fifth){
       }
   }
 }
+
+window.traitBlurbs = function(trait){
+  switch(trait){
+    case 'a':
+     return "You tend to be friendly and caring towards others, rather than doubtful or suspicious. You can be trusting to a fault, but that's what people love!";
+    case 'c':
+     return "You like to be organized and always have a plan of action when things go down. You have a sense of duty and push yourself to be the best you can be.";
+    case 'e':
+     return "You love to be surrounded by your friends. You always seem to be bouncing around, filled with positive energy, which makes people love to be around you too!";
+    case 'n':
+     return "You tend to flare up whenever things go wrong, or perhaps just have a bit of an ego. Nevertheless, you're one of the coolest people to be around, and that pride means you know it.";
+    case 'o':
+     return "You're always open to new ideas and experiences, so you end up going with your friends to a whole lot of fun places. Sometimes, this can get you into trouble, but that happens to the best of us!";
+  }
+}
