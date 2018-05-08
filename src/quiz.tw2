@@ -1,43 +1,6 @@
 ::Question1
 
-<style>
-body {
-  animation: colorchange 20s infinite; /* animation-name followed by duration in seconds*/
-     /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
-}
-
-@keyframes colorchange
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-</style>
+  ::@include src/rainbowbg.html
 
 Alright, here we go...
 
@@ -59,44 +22,7 @@ Alright, here we go...
 
 ::Question2
 
-<style>
-body {
-  animation: colorchange 20s infinite; /* animation-name followed by duration in seconds*/
-     /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
-}
-
-@keyframes colorchange
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-</style>
+  ::@include src/rainbowbg.html
 
 Hmm... how about this?
 
@@ -116,44 +42,7 @@ Hmm... how about this?
 
 ::Question3
 
-<style>
-body {
-  animation: colorchange 20s infinite; /* animation-name followed by duration in seconds*/
-     /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
-}
-
-@keyframes colorchange
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-</style>
+  ::@include src/rainbowbg.html
 
 Interesting... try this one?
 
@@ -173,44 +62,7 @@ Interesting... try this one?
 
 ::Question4
 
-<style>
-body {
-  animation: colorchange 20s infinite; /* animation-name followed by duration in seconds*/
-     /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
-}
-
-@keyframes colorchange
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-</style>
+  ::@include src/rainbowbg.html
 
 I think I'm getting a feel for you. Now...
 
@@ -230,44 +82,7 @@ I think I'm getting a feel for you. Now...
 
 ::Question5
 
-<style>
-body {
-  animation: colorchange 20s infinite; /* animation-name followed by duration in seconds*/
-     /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 20s infinite; /* Chrome and Safari */
-}
-
-@keyframes colorchange
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
-  0%   {background: hsl(0, 100%, 50%);}
-  10%  {background: hsl(36, 100%, 50%);}
-  20%  {background: hsl(72, 100%, 50%);}
-  30%  {background: hsl(108, 100%, 50%);}
-  40%  {background: hsl(144, 100%, 50%);}
-  50%  {background: hsl(180, 100%, 50%);}
-  60%  {background: hsl(216, 100%, 60%);}
-  70%  {background: hsl(252, 100%, 70%);}
-  80%  {background: hsl(286, 100%, 60%);}
-  90%  {background: hsl(324, 100%, 50%);}
-  100% {background: hsl(360, 100%, 50%);}
-}
-
-</style>
+  ::@include src/rainbowbg.html
 
 Almost there! Last one.
 
