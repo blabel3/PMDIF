@@ -139,7 +139,11 @@ Based on what I've gleaned about you:
 
 A person like that... would be perfect as the <%= s.player.pokemon.types[0] %>-type, <%= s.player.pokemon.species %>!
 
+Now, are you ready to start your **[[adventure->Discord]]**?
+
 ::StoryIncludes
+
+src/discord.tw2
 
 src/question-helper.tw2
 src/questions.tw2
