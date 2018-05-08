@@ -107,22 +107,17 @@ empty rn
 
 ::Results
 
-<% s.highest = window.highest();
+<% s.first = window.highest();
    s.second = window.highest();
-   console.log(s.highest);
-   console.log(s.second); %>
+   s.third = window.highest();
+   s.fourth = window.highest();
+   s.fifth = window.highest();
+   console.log(s.first + s.second + s.third + s.fourth + s.fifth); %>
 
-<% switch (s.highest){
-    case "dedicated":
-      //
-      break;
-    case "caring":
-      //
-      break;
-    }
-    %>
+<%= window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth) %>
 
 ::StoryIncludes
 
 src/question-helper.tw2
 src/questions.tw2
+src/player.tw2

@@ -1,10 +1,14 @@
 ::Question Functions [script]
 
-window.story.state.stats = {lonely: 0, jolly: 0, docile: 0, impish: 0, brave: 0,
-  timid: 0, quirky: 0, caring: 0, rash: 0, relaxed: 0, sassy: 0, gentle: 0,
-  hasty: 0, careful: 0, sensitive: 0, hardy: 0, careful: 0, sensitive: 0,
-  hardy: 0, modest: 0, proud: 0, honest: 0, bashful: 0, naive: 0, dedicated: 0,
-  clever: 0, curious: 0, rowdy: 0, dreamy: 0};
+/* Stats based on the big five personality traits:
+ * O = openness
+ * C = Conscientiousness
+ * E = Extraversion
+ * A = Agreeableness
+ * N = Neuroticism
+ */
+
+window.story.state.stats = { o:0, c:0, e:0, a:0, n:0 };
 
 //REquires matching key from stats above!!
 function addStat (key, bonus){
@@ -30,8 +34,7 @@ window.highest = function() {
 
  function statChange (stat, bonus){
   addStat(stat, bonus);
-  //addStat('hasty', bonus); checking that the error isn't whatever it got passed
-  console.log(stat + " = " + window.story.state.stats[stat]);
+  //console.log(stat + " = " + window.story.state.stats[stat]);
   //console.log("Highest - " + highest());
 };
 
