@@ -118,17 +118,10 @@ empty rn
    console.log(s.fourth);
    console.log(s.fifth); %>
 
-<% switch (s.first){
-    case "dedicated":
-      //
-      break;
-    case "caring":
-      //
-      break;
-    }
-    %>
+<%= window.resultSpecies(s.first, s.second, s.third, s.fourth, s.fifth) %>
 
 ::StoryIncludes
 
 src/question-helper.tw2
 src/questions.tw2
+src/player.tw2
